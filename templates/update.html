@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Update Todo{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Update Todo</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="title">Todo Title</label>
+                    <input type="text" class="form-control" name="title" id="title" value="{{ todo.title }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="desc">Todo Description</label>
+                    <input type="text" class="form-control" name="desc" id="desc" value="{{ todo.desc }}" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Todo</button>
+                <a href="/" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
